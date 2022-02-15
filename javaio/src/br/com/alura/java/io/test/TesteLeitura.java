@@ -18,6 +18,8 @@ public class TesteLeitura {
 		String linha = br.readLine();
 		
 		System.out.println(linha);
+		
+		br.close();
 
 	}
 

@@ -14,19 +14,20 @@ public class TesteLeitura2 {
 	while(sc.hasNextLine()) {
 		
 		String linha = sc.nextLine();
-		System.out.println(linha);
+		//System.out.println(linha);
 		
 		Scanner linhasc = new Scanner(linha);
 		linhasc.useLocale(Locale.US);
 		linhasc.useDelimiter(",");
 		
-		String valor1 = linhasc.next();
-		int valor2 = linhasc.nextInt();
-		int valor3 = linhasc.nextInt();
-		String valor4 = linhasc.next();
-		double valor5 = linhasc.nextDouble();
+		String tipoConta = linhasc.next();
+		int agencia = linhasc.nextInt();
+		int numero = linhasc.nextInt();
+		String titular = linhasc.next();
+		double saldo = linhasc.nextDouble();
 		
-		System.out.println(valor1 + valor2 + valor3 + valor4 + valor5);
+		String valorFormatado = String.format(new Locale("pt", "BR"), "%s - %04d-%08d, %20s: %08.2f ", tipoConta, agencia, numero, titular, saldo);
+		System.out.println(valorFormatado);
 		linhasc.close();
 		//String [] valores = linha.split(",");
 		//System.out.println(Arrays.toString(valores));

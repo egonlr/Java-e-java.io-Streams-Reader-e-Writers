@@ -1,7 +1,6 @@
 package br.com.alura.java.io.test;
 
 import java.io.File;
-import java.util.Arrays;
 import java.util.Locale;
 import java.util.Scanner;
 
